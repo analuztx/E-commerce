@@ -20,19 +20,29 @@ public class Funcionario {
 
         try {
             Connection conexaobd = DriverManager.getConnection(caminho, "root", "");
-            PreparedStatement statement = conexaobd.prepareStatement("INSERT INTO desafio_um.produtos (nome_produto, preço_produto, quantidade_produto) VALUES(?, ?, ?)");
 
-            statement.setString(1, nome);
-            statement.setDouble(2, preco);
-            statement.setInt(3, quantidade);
+            PreparedStatement verificarStatement = conexaobd.prepareStatement("SELECT nome_produto FROM desafio_um.produtos WHERE nome_produto = ?");
+            verificarStatement.setString(1, nome);
+            ResultSet resultado = verificarStatement.executeQuery();
 
-            int rowsAffected = statement.executeUpdate();
-
-            if (rowsAffected > 0) {
-                System.out.println("");
-                System.out.println("Produto cadastrado com sucesso!");
+            if (resultado.next()) {
+                System.out.println("\nProduto já existente no Supermercado, adicione algum item novo!");
             } else {
-                System.out.println("Erro para cadastrar produto, tente novamente!");
+
+                PreparedStatement statement = conexaobd.prepareStatement("INSERT INTO desafio_um.produtos (nome_produto, preço_produto, quantidade_produto) VALUES(?, ?, ?)");
+
+                statement.setString(1, nome);
+                statement.setDouble(2, preco);
+                statement.setInt(3, quantidade);
+
+                int rowsAffected = statement.executeUpdate();
+
+                if (rowsAffected > 0) {
+                    System.out.println("");
+                    System.out.println("Produto cadastrado com sucesso!");
+                } else {
+                    System.out.println("Erro para cadastrar produto, tente novamente!");
+                }
             }
 
         } catch (SQLException e) {
@@ -127,20 +137,31 @@ public class Funcionario {
 
         try {
             Connection conexaobd = DriverManager.getConnection(caminho, "root", "");
-            PreparedStatement statement = conexaobd.prepareStatement("UPDATE desafio_um.produtos SET nome_produto = ?, preço_produto = ?, quantidade_produto = ? WHERE id_produto = ?");
 
-            statement.setString(1, nome);
-            statement.setDouble(2, preco);
-            statement.setInt(3, quantidade);
-            statement.setInt(4, id_produto);
+            PreparedStatement verificarStatement = conexaobd.prepareStatement("SELECT nome_produto FROM desafio_um.produtos WHERE nome_produto = ? AND id_produto <> ?");
+            verificarStatement.setString(1, nome);
+            verificarStatement.setInt(2, id_produto);
+            ResultSet resultado = verificarStatement.executeQuery();
 
-            int rowsAffected = statement.executeUpdate();
-
-            if (rowsAffected > 0) {
-                System.out.println("");
-                System.out.println("Produto atualizado com sucesso!");
+            if (resultado.next()) {
+                System.out.println("\nProduto já existente no Supermercado, atualize para algum item novo!");
             } else {
-                System.out.println("Erro ao atualizar o produto, tente novamente!");
+
+                PreparedStatement statement = conexaobd.prepareStatement("UPDATE desafio_um.produtos SET nome_produto = ?, preço_produto = ?, quantidade_produto = ? WHERE id_produto = ?");
+
+                statement.setString(1, nome);
+                statement.setDouble(2, preco);
+                statement.setInt(3, quantidade);
+                statement.setInt(4, id_produto);
+
+                int rowsAffected = statement.executeUpdate();
+
+                if (rowsAffected > 0) {
+                    System.out.println("");
+                    System.out.println("Produto atualizado com sucesso!");
+                } else {
+                    System.out.println("Erro ao atualizar o produto, tente novamente!");
+                }
             }
 
         } catch (SQLException e) {

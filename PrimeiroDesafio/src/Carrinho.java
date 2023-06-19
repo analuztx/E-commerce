@@ -14,9 +14,22 @@ public class Carrinho {
             do {
                 System.out.println("Qual o nome do produto que você deseja adicionar? ");
                 String nome = scanner.nextLine();
-                produto = Funcionario.Buscar_Produto(nome);
-                if (produto == null) {
-                    System.out.println("Produto não existente, tente novamente!");
+
+                boolean produtoExistente = false;
+                for (Produto p : listaProduto) {
+                    if (p.getNome().equalsIgnoreCase(nome)) {
+                        produtoExistente = true;
+                        break;
+                    }
+                }
+                if (produtoExistente) {
+                    System.out.println("Produto já está listado no carrinho!");
+                } else {
+
+                    produto = Funcionario.Buscar_Produto(nome);
+                    if (produto == null) {
+                        System.out.println("Produto não existente, tente novamente!");
+                    }
                 }
             } while (produto == null);
 
@@ -128,7 +141,7 @@ public class Carrinho {
 
         Scanner scanner = new Scanner(System.in);
 
-        if (listaProduto.isEmpty()){
+        if (listaProduto.isEmpty()) {
             System.out.println("O carrinho está vazio, adicione alguns itens!");
         } else {
             ListarCarrinho();
