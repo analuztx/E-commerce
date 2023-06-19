@@ -28,5 +28,5 @@ e listar os itens da loja.
  • O arquivo 'banco.sql' é o script do banco
  • Abri-lo no Workbench
  • Executar os comandos e as tabelas do script
-
+* Obs: no script há alguns valores pré-colocados, entretanto, é possível inserir valores pelo console do programa. *
 
