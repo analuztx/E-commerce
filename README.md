@@ -12,11 +12,12 @@ e listar os itens da loja.
  * MySQL
 
 ### Pré Requisitos:
- * Instalar o Java no computador
- * Instalar o Xampp no computador
- * Instalar o driver do JDBC
+ * Instalar o Java no computador (oracle.com/br/java/technologies/downloads/)
+ * Instalar o Xampp no computador (https://www.apachefriends.org/pt_br/download.html)
+ * Instalar o driver do MySql (https://dev.mysql.com/downloads/connector/j/)
  * Possuir alguma IDE que rode Java, de preferência Intellij ou Eclipse
  * Possuir alguma IDE que rode MySQL, de preferência Workbench
+ * Adicionar o driver do MySql na IDE utilizada
 
 ### Uso do projeto:
  * Clonar o repositório ou fazer o download em qualquer lugar do seu computador
