@@ -24,9 +24,9 @@ e listar os itens da loja.
  • Abrir o Xampp e iniciar o MySql
 
 ## Banco de dados:
- • O banco de dados do sistema é um requisito para o funcionamento do projeto
- • O arquivo 'banco.sql' é o script do banco
- • Abri-lo no Workbench
- • Executar os comandos e as tabelas do script
+* O banco de dados do sistema é um requisito para o funcionamento do projeto *
+* O arquivo 'banco.sql' é o script do banco *
+* Abri-lo no Workbench *
+* Executar os comandos e as tabelas do script *
 * Obs: no script há alguns valores pré-colocados, entretanto, é possível inserir valores pelo console do programa. *
 
