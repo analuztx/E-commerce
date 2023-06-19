@@ -61,5 +61,6 @@ public class Produto {
                 "\n Nome = " + nome  +
                 "\n Preço = " + preco +
                 "\n Quantidade = " + quantidade;
+
     }
 }

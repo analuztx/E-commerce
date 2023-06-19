@@ -36,9 +36,12 @@ public class Carrinho {
     public static void RemoverCarrinho() {
         Scanner scanner = new Scanner(System.in);
 
+        boolean produtoEncontrado = false;
+
         try {
             if (listaProduto.isEmpty()) {
                 System.out.println("Não há produto no carrinho para ser removido!");
+                produtoEncontrado = true;
             } else {
                 System.out.println("Qual o nome do produto que você deseja remover? ");
                 String nome = scanner.nextLine();
@@ -46,11 +49,17 @@ public class Carrinho {
                     if (listaProduto.get(i).getNome().equals(nome)) {
                         listaProduto.remove(i);
                         System.out.println("Produto removido com sucesso!");
+                        produtoEncontrado = true;
+                        break;
                     }
                 }
             }
         } catch (NoSuchElementException e) {
             System.out.println("Erro ao remover item da lista, tente novamente!");
+        }
+
+        if (!produtoEncontrado) {
+            System.out.println("Produto não encontrado na lista.");
         }
 
     }
@@ -138,6 +147,7 @@ public class Carrinho {
                 System.out.println("Seu pedido foi de: " + precoFinal);
                 System.out.println("Pedido finalizado!");
                 Carrinho.AtualizarBancoDados();
+                listaProduto.clear();
 
 
                 try {
