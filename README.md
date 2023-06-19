@@ -8,15 +8,15 @@ e listar os itens da loja.
 
 
 ## As tecnologias utilizadas foram:
- • Java
- • MySQL
+ * Java *
+ * MySQL *
 
 ## Pré Requisitos:
- • Instalar o Java no computador
- • Instalar o Xampp no computador
- • Instalar o driver do JDBC
- • Possuir alguma IDE que rode Java, de preferência Intellij ou Eclipse
- • Possuir alguma IDE que rode MySQL, de preferência Workbench
+ * Instalar o Java no computador *
+ * Instalar o Xampp no computador *
+ * Instalar o driver do JDBC *
+ * Possuir alguma IDE que rode Java, de preferência Intellij ou Eclipse *
+ * Possuir alguma IDE que rode MySQL, de preferência Workbench *
 
 ## Uso do projeto:
  • Clonar o repositório ou fazer o download em qualquer lugar do seu computador
