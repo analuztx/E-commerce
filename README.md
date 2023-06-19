@@ -53,14 +53,11 @@ e listar os itens da loja.
 
 
 #### Outras ferramentas
-O desafio:
-https://legend-nightshade-bd0.notion.site/DESAFIO-1-266f087c9cfd4763b8470cfdd250f077
-
 Método:
 Foi utilizado o método Kanban para a organização e desenvolvimento do projeto
 https://trello.com/b/qiwwaC3u/desafio-um
 
 
-Caso tenha alguma dúvida, entrar em contato comigo pelo e-mail:
+#### Dúvidas ou erros
+Caso tenha alguma dúvida ou algum erro, entrar em contato comigo pelo e-mail:
 analarapupo@gmail.com
- 
