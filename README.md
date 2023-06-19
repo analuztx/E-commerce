@@ -53,6 +53,7 @@ e listar os itens da loja.
 
 ### Procedimento
 * É importante que na hora de manipular o produto, independente da opção, você escreva exatamente como está no banco de dados.
+* O banco de dados está localizado localmente, então caso for upar o banco em outro local que não seja localhost, é necessário mudar o novo caminho do banco em todas as conexões do projeto.
 
 #### Outras ferramentas
 Método:
