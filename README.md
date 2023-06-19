@@ -51,6 +51,8 @@ e listar os itens da loja.
  * Atualizar,
 * os produtos do Supermercado.
 
+### Procedimento
+* É importante que na hora de manipular o produto, independente da opção, você escreva exatamente como está no banco de dados.
 
 #### Outras ferramentas
 Método:
