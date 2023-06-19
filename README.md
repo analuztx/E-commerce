@@ -7,22 +7,23 @@ e finalizar a compra do carrinho. Além disso, também é possível adicionar, r
 e listar os itens da loja.
 
 
-As tecnologias utilizadas foram:
+## As tecnologias utilizadas foram:
  • Java
  • MySQL
 
-Pré Requisitos:
+## Pré Requisitos:
  • Instalar o Java no computador
  • Instalar o Xampp no computador
+ • Instalar o driver do JDBC
  • Possuir alguma IDE que rode Java, de preferência Intellij ou Eclipse
  • Possuir alguma IDE que rode MySQL, de preferência Workbench
 
-Uso do projeto:
+## Uso do projeto:
  • Clonar o repositório ou fazer o download em qualquer lugar do seu computador
  • Abrir o projeto na IDE de preferência
  • Abrir o Xampp e iniciar o MySql
 
-Banco de dados:
+## Banco de dados:
  • O banco de dados do sistema é um requisito para o funcionamento do projeto
  • O arquivo 'banco.sql' é o script do banco
  • Abri-lo no Workbench
